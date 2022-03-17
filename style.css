@@ -1,0 +1,93 @@
+:root {
+    /* PrimaryColors */
+    --grayish-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+
+    /* NeutralColors */
+    --white: hsl(0, 0%, 100%);
+    --dark-desaturated-blue: hsl(236, 21%, 26%);
+    --very-dark-blue: hsl(235, 16%, 14%);
+    --very-dark--blue: hsl(234, 17%, 12%);
+}
+
+/* Main */
+
+/* Tags */
+body {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 14px;
+
+    color: var(--white);
+    background: var(--very-dark--blue);
+    background-image: url(images/bg-stars.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    margin: 0;
+    height: 100vh;
+
+    text-align: center;
+}
+main {
+    display: grid;
+    place-items: center;
+}
+h1,
+p {
+    letter-spacing: 8px;
+}
+h1 {
+    font-size: 1.5rem;
+    margin: 0 35px;
+}
+p {
+    font-size: 0.75rem;
+}
+img {
+    width: 100%;
+}
+/* Classes */
+.time-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+/* IDS */
+#btn-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min(20px, 100%), 1fr));
+    gap: 35px;
+}
+#btn-group a img {
+    height: 25px;
+}
+#hills {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Queries */
+@media (min-width: 1440px) {
+    body {
+        background-size: contain;
+    }
+}
+
+/* FrontEnd preset */
+.attribution {
+    position: absolute;
+
+    writing-mode: vertical-lr;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
