@@ -28,6 +28,13 @@ body {
     height: 100vh;
 
     text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    -ms-text-overflow: hidden;
 }
 main {
     display: grid;
@@ -51,28 +58,50 @@ img {
 .time-group {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
+}
+.upper {
+    display: grid;
+    place-content: center;
 }
 /* IDS */
 #btn-group {
     display: grid;
-    grid-template-columns: repeat(3, minmax(min(20px, 100%), 1fr));
+    grid-template-columns: repeat(3, minmax(20px, 1fr));
     gap: 35px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    z-index: 1;
+    max-width: 250px;
+    margin: auto;
 }
 #btn-group a img {
-    height: 25px;
+    height: 35px;
+    width: 35px;
 }
 #hills {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+
+    min-height: 200px;
+    width: 200%;
+    overflow: hidden;
 }
 
 /* Queries */
-@media (min-width: 1440px) {
+@media (min-width: 700px) {
     body {
         background-size: contain;
+    }
+    #hills {
+        height: auto;
+        width: 200%;
     }
 }
 
