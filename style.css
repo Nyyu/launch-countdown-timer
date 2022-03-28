@@ -65,11 +65,14 @@ img {
     justify-content: center;
     gap: 15px;
 }
+.time-group div {
+    position: relative;
+}
 .clock-bg > div {
     position: relative;
 
-    width: 100px;
-    height: 50px;
+    width: 110px;
+    height: 55px;
     margin-bottom: 5px;
     border-radius: 3px;
 
@@ -79,7 +82,7 @@ img {
 .clock-bg > div:nth-child(1)::before {
     content: "";
     position: absolute;
-    width: 95px;
+    width: 105px;
     height: 2.5px;
     left: 2.5px;
     bottom: -5px;
@@ -90,7 +93,7 @@ img {
 .clock-bg > div:nth-child(2)::before {
     content: "";
     position: absolute;
-    width: 95px;
+    width: 105px;
     height: 2.5px;
     left: 2.5px;
     top: -5px;
@@ -98,9 +101,30 @@ img {
     box-shadow: 0 0 1.75px 0px var(--very-dark--blue) inset;
     clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
 }
-.clock-bg span {
+
+/* 
+    Reminder: Have to fix this later 
+*/
+.clock-bg > div:nth-child(2)::after {
+    content: "";
     position: absolute;
-    background: #fff;
+    z-index: 100;
+
+    left: 0;
+    top: -60px;
+    border-radius: 2px;
+    width: 100%;
+    height: 105%;
+    background: #000;
+    opacity: 20%;
+}
+
+.time-group div span {
+    position: absolute;
+    color: var(--soft-red);
+    font-size: 5em;
+    top: 10px;
+    left: 10px;
 }
 
 .upper {
